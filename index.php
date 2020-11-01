@@ -16,7 +16,7 @@
 
     function postStatus()
     {
-      echo $this->name . " postedd a status";
+      echo $this->name . " posted a status";
       echo "<br>";
     }
   }
