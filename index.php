@@ -1,1 +1,1 @@
-<?= "Hello world na nasa main" ?>
+<?= "Hello world" ?>
