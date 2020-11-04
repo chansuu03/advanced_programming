@@ -19,103 +19,99 @@
       <input type="submit" name="mul" value="*">
       <input type="submit" name="div" value="/">
       <br>
-      <p id="answer"></p>
+      <p id="answer">
+        <?php
+          if(isset($_POST['add']))
+          {
+            if (!empty($_POST['num1']) && !empty($_POST['num2']))
+            {
+              $num1 = $_POST['num1'];
+              $num2 = $_POST['num2'];
+              $add = $num1 + $num2;
+              echo $num1 . " + " . $num2 . " = " . $add;
+            }
+            elseif(empty($_POST['num2']) && empty($_POST['num1']))
+            {
+              echo "no data inputted please try again";
+            }
+            elseif (empty($_POST['num2']))
+            {
+              echo "no data in 2nd number";
+            }
+            elseif (empty($_POST['num1']))
+            {
+              echo "no data in 1st number";
+            }
+          }
+          elseif(isset($_POST['min']))
+          {
+            if (!empty($_POST['num1']) && !empty($_POST['num2']))
+            {
+              $num1 = $_POST['num1'];
+              $num2 = $_POST['num2'];
+              $add = $num1 - $num2;
+              echo $num1 . " - " . $num2 . " = " . $add;
+            }
+            elseif(empty($_POST['num2']) && empty($_POST['num1']))
+            {
+              echo "no data inputted please try again";
+            }
+            elseif (empty($_POST['num2']))
+            {
+              echo "no data in 2nd number";
+            }
+            elseif (empty($_POST['num1']))
+            {
+              echo "no data in 1st number";
+            }
+          }
+          elseif(isset($_POST['mul']))
+          {
+            if (!empty($_POST['num1']) && !empty($_POST['num2']))
+            {
+              $num1 = $_POST['num1'];
+              $num2 = $_POST['num2'];
+              $add = $num1 * $num2;
+              echo $num1 . " * " . $num2 . " = " . $add;
+            }
+            elseif(empty($_POST['num2']) && empty($_POST['num1']))
+            {
+              echo "no data inputted please try again";
+            }
+            elseif (empty($_POST['num2']))
+            {
+              echo "no data in 2nd number";
+            }
+            elseif (empty($_POST['num1']))
+            {
+              echo "no data in 1st number";
+            }
+          }
+          elseif(isset($_POST['div']))
+          {
+            if (!empty($_POST['num1']) && !empty($_POST['num2']))
+            {
+              $num1 = $_POST['num1'];
+              $num2 = $_POST['num2'];
+              $add = $num1 / $num2;
+              echo $num1 . " / " . $num2 . " = " . $add;
+            }
+            elseif(empty($_POST['num2']) && empty($_POST['num1']))
+            {
+              echo "no data inputted please try again";
+            }
+            elseif (empty($_POST['num2']))
+            {
+              echo "no data in 2nd number";
+            }
+            elseif (empty($_POST['num1']))
+            {
+              echo "no data in 1st number";
+            }
+          }
+        ?>
+      </p>
     </form>
-
-    <?php
-      if(isset($_POST['add']))
-      {
-        if (!empty($_POST['num1']) && !empty($_POST['num2']))
-        {
-          $num1 = $_POST['num1'];
-          $num2 = $_POST['num2'];
-          $add = $num1 + $num2;
-          echo "<br>";
-          echo $num1 . " + " . $num2 . " = " . $add;
-        }
-        elseif(empty($_POST['num2']) && empty($_POST['num1']))
-        {
-          echo "no data inputted please try again";
-        }
-        elseif (empty($_POST['num2']))
-        {
-          echo "no data in 2nd number";
-        }
-        elseif (empty($_POST['num1']))
-        {
-          echo "no data in 1st number";
-        }
-      }
-      elseif(isset($_POST['min']))
-      {
-        if (!empty($_POST['num1']) && !empty($_POST['num2']))
-        {
-          $num1 = $_POST['num1'];
-          $num2 = $_POST['num2'];
-          $add = $num1 - $num2;
-          echo "<br>";
-          echo $num1 . " - " . $num2 . " = " . $add;
-        }
-        elseif(empty($_POST['num2']) && empty($_POST['num1']))
-        {
-          echo "no data inputted please try again";
-        }
-        elseif (empty($_POST['num2']))
-        {
-          echo "no data in 2nd number";
-        }
-        elseif (empty($_POST['num1']))
-        {
-          echo "no data in 1st number";
-        }
-      }
-      elseif(isset($_POST['mul']))
-      {
-        if (!empty($_POST['num1']) && !empty($_POST['num2']))
-        {
-          $num1 = $_POST['num1'];
-          $num2 = $_POST['num2'];
-          $add = $num1 * $num2;
-          echo "<br>";
-          echo $num1 . " * " . $num2 . " = " . $add;
-        }
-        elseif(empty($_POST['num2']) && empty($_POST['num1']))
-        {
-          echo "no data inputted please try again";
-        }
-        elseif (empty($_POST['num2']))
-        {
-          echo "no data in 2nd number";
-        }
-        elseif (empty($_POST['num1']))
-        {
-          echo "no data in 1st number";
-        }
-      }
-      elseif(isset($_POST['div']))
-      {
-        if (!empty($_POST['num1']) && !empty($_POST['num2']))
-        {
-          $num1 = $_POST['num1'];
-          $num2 = $_POST['num2'];
-          $add = $num1 / $num2;
-          echo "<br>";
-          echo $num1 . " / " . $num2 . " = " . $add;
-        }
-        elseif(empty($_POST['num2']) && empty($_POST['num1']))
-        {
-          echo "no data inputted please try again";
-        }
-        elseif (empty($_POST['num2']))
-        {
-          echo "no data in 2nd number";
-        }
-        elseif (empty($_POST['num1']))
-        {
-          echo "no data in 1st number";
-        }
-      }
-    ?>
 
     <form class="" action="index.php" method="post">
       <h3>GCD</h3>
