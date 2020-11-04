@@ -9,9 +9,9 @@
     <form class="" action="index.php" method="post">
       <h3>Calculator</h3>
       <p>Input first number:</p>
-      <input type="text" name="num1" value="">
+      <input type="number" name="num1" value="">
       <p>Input second number:</p>
-      <input type="text" name="num2" value="">
+      <input type="number" name="num2" value="">
       <br>
       <br>
       <input type="submit" name="add" value="+">
@@ -120,9 +120,9 @@
     <form class="" action="index.php" method="post">
       <h3>GCD</h3>
       <p>Input first number:</p>
-      <input type="text" name="num1" value="">
+      <input type="number" name="num1" value="">
       <p>Input second number:</p>
-      <input type="text" name="num2" value="">
+      <input type="number" name="num2" value="">
       <br>
       <br>
       <input type="submit" name="gcd" value="Submit">
